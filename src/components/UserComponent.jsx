@@ -12,8 +12,8 @@ const UserComponent = ({ userId }) => {
             try {
                 const userData = await GetUserById(userId);
                 setUser(userData);
-            } catch (error) {
-                setError('Error fetching user data');
+            } catch (err) {
+                setError(err.message);
             } finally {
                 setLoading(false);
             }
@@ -37,7 +37,7 @@ const UserComponent = ({ userId }) => {
                 <div>
                     <p>Name: {user.UserName}</p>
                     <p>Email: {user.Email}</p>
-                    <p>Phone Number: {user.PhoneNumber } </p>
+                    <p>Phone Number: {user.PhoneNumber}</p>
                 </div>
             ) : (
                 <p>No user found</p>
