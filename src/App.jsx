@@ -1,19 +1,27 @@
-import './App.css'
+import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom'; // Removed BrowserRouter as Router
 import UserComponent from './components/UserComponent';
 import RegisterForm from './components/RegisterComponent';
+import PaymentForm from './components/PaymentComponent'; // Ensure this is the correct import
 
-const App = () => {
-
+function App() {
     return (
-        <Router>
+        <div>
+            <h1>Welcome to the App</h1>
+            <nav>
+                <ul>
+                    <li><Link to="/register">Register</Link></li>
+                    <li><Link to="/payment">Make a Payment</Link></li>
+                    <li><Link to="/user">User</Link></li>
+                </ul>
+            </nav>
             <Routes>
                 <Route path="/register" element={<RegisterForm />} />
+                <Route path="/payment" element={<PaymentForm />} /> {/* The route for payment */}
                 <Route path="/user" element={<UserComponent />} />
             </Routes>
-        </Router>
-
+        </div>
     );
 }
 
