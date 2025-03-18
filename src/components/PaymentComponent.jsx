@@ -12,7 +12,7 @@ import {
 import PaymentService from '../services/PaymentTestService';
 import styles from './PaymentForm.module.css'; 
 
-const stripePromise = loadStripe('pk_test_51R2Qy6HJRKmLY8vDUG45M5KoY34MG4D01GA7L4sb9gJUBKj0pXQH7xepw0M0Cu314lqfF9EN3MoKN3OjdUVelXOk00XHHYOgdh');
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY.toString());
 
 const stripeOptions = {
     style: {
