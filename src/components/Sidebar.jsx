@@ -1,49 +1,75 @@
+﻿// components/Sidebar.js
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import './Sidebar.css';
 
-const Sidebar = () => {
-    const location = useLocation();
-    const menuItems = [
-        { name: 'Dashboard', path: '/sidebar' },
-        { name: 'Users', path: '/sidebar/users' },
-        { name: 'Products', path: '/sidebar/products' },
-        { name: 'Orders', path: '/sidebar/orders' },
-        { name: 'Categories', path: '/sidebar/categories' },
-        { name: 'Promotions', path: '/sidebar/promotions' },
-        { name: 'Addresses', path: '/sidebar/addresses' },
-        { name: 'Audit Logs', path: '/sidebar/audit-logs' },
-    ];
-
+// You can use any icon library, but let's assume you're using simple SVG icons
+function Sidebar() {
     return (
-        <div
-            className="sidebar"
-            style={{
-                width: '240px',
-                background: '#2c3e50',
-                color: '#ecf0f1',
-                padding: '20px',
-                boxSizing: 'border-box'
-            }}
-        >
-            <h2 style={{ margin: '0 0 20px' }}>Admin Panel</h2>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-                {menuItems.map((item, index) => (
-                    <li key={index} style={{ margin: '15px 0' }}>
-                        <Link
-                            to={item.path}
-                            style={{
-                                color: location.pathname === item.path ? '#3498db' : '#ecf0f1',
-                                textDecoration: 'none',
-                                fontWeight: location.pathname === item.path ? 'bold' : 'normal'
-                            }}
-                        >
-                            {item.name}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <aside className="sidebar">
+            <div className="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+
+            <nav className="sidebar-nav">
+                <NavLink to="/admin/dashboard" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">📊</span>
+                    <span className="nav-text">Dashboard</span>
+                </NavLink>
+
+                <NavLink to="/admin/users" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">👥</span>
+                    <span className="nav-text">Users</span>
+                </NavLink>
+
+                <NavLink to="/admin/products" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">📦</span>
+                    <span className="nav-text">Products</span>
+                </NavLink>
+
+                <NavLink to="/admin/orders" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">🛒</span>
+                    <span className="nav-text">Orders</span>
+                </NavLink>
+
+                <NavLink to="/admin/categories" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">🏷️</span>
+                    <span className="nav-text">Categories</span>
+                </NavLink>
+
+                <NavLink to="/admin/promotions" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">🎯</span>
+                    <span className="nav-text">Promotions</span>
+                </NavLink>
+
+                <NavLink to="/admin/addresses" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">📍</span>
+                    <span className="nav-text">Addresses</span>
+                </NavLink>
+
+                <NavLink to="/admin/audit-logs" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">📝</span>
+                    <span className="nav-text">Audit Logs</span>
+                </NavLink>
+            </nav>
+        </aside>
     );
-};
+}
 
 export default Sidebar;

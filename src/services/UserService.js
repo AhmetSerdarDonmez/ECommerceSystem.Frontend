@@ -1,12 +1,7 @@
 // src/services/UserService.js
-import axios from 'axios';
+// import axios from 'axios';
+import apiClient from '../apiClient';
 
-const apiClient = axios.create({
-    baseURL: '/api',
-    headers: {
-        'Content-Type': 'application/json'
-    }
-});
 
 export const GetUserById = async (userId) => {
     try {
@@ -14,6 +9,16 @@ export const GetUserById = async (userId) => {
         return response.data;
     } catch (error) {
         console.error('Error fetching user:', error);
+        throw error;
+    }
+};
+
+export const GetAllUsers = async () => {
+    try {
+        const response = await apiClient.get('/User/get-all-users'); // API endpoint'ini backend'inize göre ayarlayýn
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching users:', error);
         throw error;
     }
 };

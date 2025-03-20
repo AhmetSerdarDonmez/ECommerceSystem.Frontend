@@ -4,11 +4,36 @@ import { Route, Routes, Link } from 'react-router-dom';
 import UserComponent from './components/UserComponent';
 import RegisterForm from './components/RegisterComponent';
 import PaymentForm from './components/PaymentComponent';
-
+import Sidebar from './components/Sidebar';
+import Dashboard from './pages/Dashboard';
+import Users from './pages/Users';
+import Products from './pages/Products';
+import Orders from './pages/Orders';
 // Import the new AdminLayout for the admin panel pages
 import AdminLayout from './pages/AdminLayout';
 
 function App() {
+    return (
+        <div className="app-container">
+            <Sidebar />
+            <main className="content-area">
+                <Routes>
+                    <Route path="/admin/dashboard" element={<Dashboard />} />
+                    <Route path="/admin/users" element={<Users />} />
+                    <Route path="/admin/products" element={<Products />} />
+                    <Route path="/admin/orders" element={<Orders />} />
+                    <Route path="/register" element={<RegisterForm />} />
+                    <Route path="/payment" element={<PaymentForm />} />
+                    <Route path="/user" element={<UserComponent />} />
+                    <Route path="/admin/*" element={<AdminLayout />} />
+                </Routes>
+            </main>
+        </div>
+    );
+}
+
+
+function Apps() {
     return (
         <div>
             <h1>Welcome to the App</h1>

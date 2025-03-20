@@ -1,11 +1,34 @@
-import React from 'react';
+// src/pages/Users.jsx (veya bileþeninizin bulunduðu klasör)
+import React, { useState, useEffect } from 'react';
+import { GetAllUsers } from '../services/UserService'; // UserService.js dosyasýnýn doðru yolunu belirtin
 
 const Users = () => {
-    const dummyUsers = [
-        { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Admin' },
-        { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
-        { id: 3, name: 'Alice Johnson', email: 'alice@example.com', role: 'User' },
-    ];
+    const [users, setUsers] = useState();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const data = GetAllUsers();
+                setUsers(data);
+                setLoading(false);
+            } catch (err) {
+                setError(err.message || 'Kullanýcýlar yüklenirken bir hata oluþtu.');
+                setLoading(false);
+            }
+        };
+
+        fetchUsers();
+    },);
+
+    if (loading) {
+        return <div>Kullanýcýlar yükleniyor...</div>;
+    }
+
+    if (error) {
+        return <div style={{ color: 'red', fontWeight: 'bold' }}>Hata: {error}</div>;
+    }
 
     return (
         <div>
@@ -20,12 +43,12 @@ const Users = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {dummyUsers.map(user => (
+                    {users.map(user => (
                         <tr key={user.id}>
-                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.id}</td>
-                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.name}</td>
+                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.userId}</td>
+                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.userName}</td> {/* Backend'den gelen kullanýcý adý alanýný kullanýn */}
                             <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.email}</td>
-                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.role}</td>
+                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.roleId}</td> {/* Backend'den gelen rol alanýný kullanýn */}
                         </tr>
                     ))}
                 </tbody>
