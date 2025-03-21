@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // useNavigate hook'unu import ediyoruz
+import { useNavigate, Link } from 'react-router-dom'; // Import Link
 import './LoginForm.css';
 
 const apiClient = axios.create({
@@ -24,56 +24,54 @@ function LoginForm() {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate(); // useNavigate hook'unu kullanmak için initialize ediyoruz
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
         try {
             const response = await GetUserLogin(userName, password);
-            console.log(response);
-//            const responseData = JSON.parse(JSON.stringify(response.data));
-
             const Token = response.token;
 
             if (Token) {
-                //localStorage.setItem('authToken', Token);
                 sessionStorage.setItem('authToken', Token);
-
-                console.log('Giriþ baþarýlý! Token kaydedildi:', Token);
-                navigate('/admin/dashboard'); // Giriþ baþarýlý olduðunda dashboard'a yönlendiriyoruz
+                navigate('/admin/dashboard');
             } else {
-                setError('Giriþ baþarýlý oldu ancak token alýnamadý.');
-                console.error('Giriþ baþarýlý oldu ancak token alýnamadý:', response.data);
+                setError('Login was successful but token could not be received.');
+                console.error('Login was successful but token could not be received:', response.data);
             }
 
         } catch (error) {
-            setError('Kullanýcý adý veya þifre hatalý.');
-            console.error('Giriþ hatasý:', error);
+            setError('Invalid username or password.');
+            console.error('Login error:', error);
         }
     };
 
     return (
         <div className="login-component">
-            <h1>Giriþ Yap</h1>
+            <h1>Login</h1>
             <form onSubmit={handleSubmit} className="login-form">
                 <input
                     type="text"
-                    placeholder="Kullanýcý Adý"
+                    placeholder="Username"
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     className="user-input"
                 />
                 <input
                     type="password"
-                    placeholder="Þifre"
+                    placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="user-input"
                 />
-                <button type="submit" className="login-button">Giriþ</button>
+                <button type="submit" className="login-button">Login</button>
                 {error && <p className="error-message">{error}</p>}
             </form>
+            <p>Don't have an account?</p>
+            <Link to="/register" className="register-button-link">
+                <button className="register-button">Register</button>
+            </Link>
         </div>
     );
 }

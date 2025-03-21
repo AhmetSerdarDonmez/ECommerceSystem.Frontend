@@ -1,8 +1,9 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { RegisterUserService } from '../services/RegisterUserService';
+import { useNavigate, Link } from 'react-router-dom'; // Import Link
 import './RegisterComponent.css';
-
 
 function RegisterForm() {
     const [userName, setUserName] = useState('');
@@ -10,6 +11,7 @@ function RegisterForm() {
     const [passwordHash, setPasswordHash] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [message, setMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,6 +19,7 @@ function RegisterForm() {
             const result = await RegisterUserService(userName, email, passwordHash, phoneNumber);
             setMessage('User registered successfully!');
             console.log('User registered:', result);
+            navigate('/admin/dashboard'); // You might want to redirect to a different page after registration
         } catch (error) {
             setMessage('Registration failed.');
         }
@@ -57,72 +60,12 @@ function RegisterForm() {
                 <button type="submit" className="register-button">Register</button>
                 {message && <p className="message">{message}</p>}
             </form>
-
-
+            <p>Already have an account?</p>
+            <Link to="/login" className="login-button-link"> {/* Assuming /register is your login page */}
+                <button className="login-button">Login</button>
+            </Link>
         </div>
     );
 }
 
 export default RegisterForm;
-
-
-
-
-/*
-import React, { useState } from 'react';
-import { RegisterUserService } from '../services/RegisterUserService';
-import './RegisterComponent.css';
-
-function RegisterForm() {
-    const [userName, setUserName] = useState('');
-    const [email, setEmail] = useState('');
-    const [passwordHash, setPasswordHash] = useState('');
-    const [PhoneNumber, setPhoneNumber] = useState('');
-    const [message, setMessage] = useState('');
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const result = await RegisterUserService(userName, email, passwordHash,PhoneNumber);
-            setMessage('User registered successfully!');
-            console.log('User registered:', result);
-        } catch (error) {
-            setMessage('Registration failed.');
-        }
-    };
-
-    return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                placeholder="User Name"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
-            />
-            <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                value={passwordHash}
-                onChange={(e) => setPasswordHash(e.target.value)}
-            />
-            <input
-                type="text"
-                placeholder="Phone Number"
-                value={PhoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-            />
-            <button type="submit">Register</button>
-            {message && <p>{message}</p>}
-        </form>
-    );
-}
-
-export default RegisterForm;
-
-*/

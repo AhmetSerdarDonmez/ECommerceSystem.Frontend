@@ -13,6 +13,7 @@
     <PackageJsonDependenciesStripeReactStripeJs Condition="$(PackageJsonDependenciesStripeReactStripeJs) == ''">^3.4.0</PackageJsonDependenciesStripeReactStripeJs>
     <PackageJsonDependenciesStripeStripeJs Condition="$(PackageJsonDependenciesStripeStripeJs) == ''">^6.0.0</PackageJsonDependenciesStripeStripeJs>
     <PackageJsonDependenciesAxios Condition="$(PackageJsonDependenciesAxios) == ''">^1.8.3</PackageJsonDependenciesAxios>
+    <PackageJsonDependenciesJwtDecode Condition="$(PackageJsonDependenciesJwtDecode) == ''">^4.0.0</PackageJsonDependenciesJwtDecode>
     <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^19.0.0</PackageJsonDependenciesReact>
     <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^19.0.0</PackageJsonDependenciesReactDom>
     <PackageJsonDependenciesReactRouterDom Condition="$(PackageJsonDependenciesReactRouterDom) == ''">^7.3.0</PackageJsonDependenciesReactRouterDom>

@@ -67,6 +67,20 @@ function Sidebar() {
                     <span className="nav-icon">📝</span>
                     <span className="nav-text">Audit Logs</span>
                 </NavLink>
+
+                <NavLink to="/login" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">📝</span>
+                    <span className="nav-text">Login</span>
+                </NavLink>
+
+                <NavLink to="/register" className={({ isActive }) =>
+                    `nav-item ${isActive ? 'active' : ''}`
+                }>
+                    <span className="nav-icon">📝</span>
+                    <span className="nav-text">Register</span>
+                </NavLink>
             </nav>
         </aside>
     );
