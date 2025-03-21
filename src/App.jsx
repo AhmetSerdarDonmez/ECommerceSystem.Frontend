@@ -43,7 +43,7 @@ function App() {
         } else {
             navigate('/login', { replace: true }); // Redirect to login if no token
         }
-    }, [navigate]);
+    }, []);
 
     // Protected Admin Route Component
     const ProtectedAdminRoute = ({ children }) => {
