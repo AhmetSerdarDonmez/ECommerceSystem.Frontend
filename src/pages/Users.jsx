@@ -10,7 +10,7 @@ const Users = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const data = GetAllUsers();
+                const data = await GetAllUsers();
                 setUsers(data);
                 setLoading(false);
             } catch (err) {
@@ -20,7 +20,7 @@ const Users = () => {
         };
 
         fetchUsers();
-    },);
+    },[]);
 
     if (loading) {
         return <div>Kullanýcýlar yükleniyor...</div>;
@@ -44,11 +44,11 @@ const Users = () => {
                 </thead>
                 <tbody>
                     {users.map(user => (
-                        <tr key={user.id}>
-                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.userId}</td>
-                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.userName}</td> {/* Backend'den gelen kullanýcý adý alanýný kullanýn */}
-                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.email}</td>
-                            <td style={{ padding: '8px', border: '1px solid #ddd' }}>{user.roleId}</td> {/* Backend'den gelen rol alanýný kullanýn */}
+                        <tr key={user.userId}>  {/* or user.id, whichever is unique */}
+                            <td>{user.userId}</td>
+                            <td>{user.userName}</td>
+                            <td>{user.email}</td>
+                            <td>{user.roleId}</td>
                         </tr>
                     ))}
                 </tbody>
