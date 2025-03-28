@@ -9,7 +9,7 @@ import StripePaymentWrapper from './components/PaymentComponent.jsx'; // Import 
 import UserComponent from './components/UserComponent.jsx';
 
 createRoot(document.getElementById('root')).render(
-    <StrictMode>
+   // <StrictMode>
         <Router>
             <Routes>
                 <Route path="/*" element={<App />} /> {/* Updated path */}
@@ -20,5 +20,5 @@ createRoot(document.getElementById('root')).render(
                 
             </Routes>
         </Router>
-    </StrictMode>
+    // </StrictMode>
 );
