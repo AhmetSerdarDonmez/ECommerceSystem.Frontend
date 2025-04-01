@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
-import { RegisterUserService } from '../services/RegisterUserService';
+import { RegisterUserService, RegisterUserServiceByGoogle } from '../services/RegisterUserService';
 import { useNavigate, Link } from 'react-router-dom';
 import './RegisterComponent.css';
 
@@ -14,17 +14,16 @@ function RegisterForm() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Patch the Permissions API if available to ensure proper binding.
+        // Patch the Permissions API if available.
         if (navigator.permissions && navigator.permissions.query) {
             const originalQuery = navigator.permissions.query;
             navigator.permissions.query = originalQuery.bind(navigator.permissions);
         }
 
-        // Ensure the Google Identity Services script has been loaded.
+        // Load Google Identity Services and render the sign-in button.
         if (window.google && window.google.accounts) {
             window.google.accounts.id.initialize({
-                client_id:
-                    '900122265445-e57qpuu3sudvt37jhor0rvrkm3q3uuue.apps.googleusercontent.com', // Replace with your Client ID
+                client_id: '900122265445-e57qpuu3sudvt37jhor0rvrkm3q3uuue.apps.googleusercontent.com', // Replace with your Client ID
                 callback: handleCredentialResponse,
             });
             window.google.accounts.id.renderButton(
@@ -38,9 +37,20 @@ function RegisterForm() {
         }
     }, []);
 
-    const handleCredentialResponse = (response) => {
+    // This function is called once Google Sign-In returns a token.
+    const handleCredentialResponse = async (response) => {
         console.log('Encoded JWT ID token:', response.credential);
-        // Optionally decode the token or send it to your backend for verification.
+        try {
+            // Call the Google Sign-In registration service.
+            const result = await RegisterUserServiceByGoogle(response.credential);
+            console.log('Google Sign-In registration result:', result);
+            setMessage('User registered successfully via Google!');
+            // You can navigate to a dashboard or update your UI as needed.
+            navigate('/admin/dashboard');
+        } catch (error) {
+            setMessage('Google registration failed.');
+            console.error(error);
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -59,7 +69,6 @@ function RegisterForm() {
     return (
         <div className="register-component">
             <h1>Register User</h1>
-
             <form onSubmit={handleSubmit} className="register-form">
                 <input
                     type="text"
@@ -94,10 +103,8 @@ function RegisterForm() {
                 </button>
                 {message && <p className="message">{message}</p>}
             </form>
-
             {/* Google Sign-In Button */}
             <div id="googleSignInDiv" style={{ marginTop: '20px' }}></div>
-
             <p>Already have an account?</p>
             <Link to="/login" className="login-button-link">
                 <button className="login-button">Login</button>
