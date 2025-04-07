@@ -10,7 +10,7 @@ const apiClient = axios.create({
 export const GetUserLogin = async (userName, password) => {
     try {
         // POST isteði kullanarak kullanýcý adý ve þifreyi istek gövdesinde gönderiyoruz.
-        const response = await apiClient.post('/login', { Username: userName, Password: password });
+        const response = await apiClient.post('/auth/login', { Username: userName, Password: password });
         return response.data;
     } catch (error) {
         console.error('Error fetching user:', error);

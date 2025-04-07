@@ -1,9 +1,29 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { RegisterUserService, RegisterUserServiceByGoogle } from '../services/RegisterUserService';
 import { useNavigate, Link } from 'react-router-dom';
 import './RegisterComponent.css';
+// import axios from '../../node_modules/axios/index';
+
+const apiClient = axios.create({
+    baseURL: '/api',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+});
+
+export const GetUserLogin = async (userName, password) => {
+    try {
+        const response = await apiClient.post('/auth/login', { Username: userName, Password: password });
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching user:', error);
+        throw error;
+    }
+};
+
 
 function RegisterForm() {
     const [userName, setUserName] = useState('');
@@ -12,6 +32,9 @@ function RegisterForm() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
+
+
+
 
     useEffect(() => {
         // Patch the Permissions API if available.
@@ -44,8 +67,13 @@ function RegisterForm() {
             // Call the Google Sign-In registration service.
             const result = await RegisterUserServiceByGoogle(response.credential);
             console.log('Google Sign-In registration result:', result);
+
+            var Token = result.token;
+
             setMessage('User registered successfully via Google!');
             // You can navigate to a dashboard or update your UI as needed.
+            sessionStorage.setItem('authToken', Token);
+
             navigate('/admin/dashboard');
         } catch (error) {
             setMessage('Google registration failed.');

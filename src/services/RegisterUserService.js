@@ -18,9 +18,9 @@ export const RegisterUserService = async (userName, email, passwordHash, phoneNu
     }
 };
 
-export const RegisterUserServiceByGoogle = async (Token) => {
+export const RegisterUserServiceByGoogle = async (token) => {
     try {
-        const payload = { token: Token };
+        const payload = { token: token };
         const response = await apiClient.post('/User/google-signin', payload);
         return response.data;
     } catch (error) {

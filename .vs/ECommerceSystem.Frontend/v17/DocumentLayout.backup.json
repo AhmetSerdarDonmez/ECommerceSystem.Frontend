@@ -7,8 +7,28 @@
       "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\components\\registercomponent.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\services\\registeruserservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\services\\registeruserservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\services\\userservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\services\\userservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\components\\loginform.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\components\\loginform.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\services\\loginservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\services\\loginservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\components\\registercomponent.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\components\\registercomponent.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -31,24 +51,12 @@
       "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\services\\userservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\services\\userservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\components\\registercomponent.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\components\\registercomponent.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\components\\usercomponent.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\components\\usercomponent.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\components\\table.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\components\\table.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -77,14 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\components\\paymentform.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\components\\paymentform.module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\services\\loginservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\services\\loginservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\components\\loginform.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|solutionrelative:src\\components\\loginform.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5888B4F0-2FE4-9DDD-C0CC-ED3A56DF0F37}|ecommercesystem.frontend.esproj|c:\\users\\serdar.donmez\\desktop\\eticaretproje\\ecommercesystemproject\\frontend\\ecommercesystem.frontend\\src\\components\\productform.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -236,92 +236,40 @@
               "RelativeDocumentMoniker": "src\\components\\RegisterComponent.jsx",
               "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\RegisterComponent.jsx",
               "RelativeToolTip": "src\\components\\RegisterComponent.jsx",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAkwHQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAgwEMAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2025-03-20T11:13:59.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RegisterUserService.js",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\services\\RegisterUserService.js",
               "RelativeDocumentMoniker": "src\\services\\RegisterUserService.js",
               "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\services\\RegisterUserService.js",
               "RelativeToolTip": "src\\services\\RegisterUserService.js",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAkwB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwBYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-03-20T11:46:31.303Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "UserService.js",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\services\\UserService.js",
               "RelativeDocumentMoniker": "src\\services\\UserService.js",
               "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\services\\UserService.js",
               "RelativeToolTip": "src\\services\\UserService.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-03-20T11:46:35.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "main.jsx",
-              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\main.jsx",
-              "RelativeDocumentMoniker": "src\\main.jsx",
-              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\main.jsx",
-              "RelativeToolTip": "src\\main.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-03-20T11:08:12.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "apiClient.js",
-              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\apiClient.js",
-              "RelativeDocumentMoniker": "src\\apiClient.js",
-              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\apiClient.js",
-              "RelativeToolTip": "src\\apiClient.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-20T12:09:30.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "eslint.config.js",
-              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\eslint.config.js",
-              "RelativeDocumentMoniker": "eslint.config.js",
-              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\eslint.config.js",
-              "RelativeToolTip": "eslint.config.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-27T12:21:38.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "package.json",
-              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\package.json",
-              "RelativeDocumentMoniker": "package.json",
-              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\package.json",
-              "RelativeToolTip": "package.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-19T06:15:17.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\index.html",
               "RelativeDocumentMoniker": "index.html",
@@ -329,25 +277,111 @@
               "RelativeToolTip": "index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-03-20T11:45:02.295Z",
+              "WhenOpened": "2025-03-20T11:45:02.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\App.jsx",
+              "RelativeDocumentMoniker": "src\\App.jsx",
+              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\App.jsx",
+              "RelativeToolTip": "src\\App.jsx",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwDEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-18T08:39:04.878Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
+              "Title": "LoginService.js",
+              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\services\\LoginService.js",
+              "RelativeDocumentMoniker": "src\\services\\LoginService.js",
+              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\services\\LoginService.js",
+              "RelativeToolTip": "src\\services\\LoginService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-20T11:47:21.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginForm.jsx",
+              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\LoginForm.jsx",
+              "RelativeDocumentMoniker": "src\\components\\LoginForm.jsx",
+              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\LoginForm.jsx",
+              "RelativeToolTip": "src\\components\\LoginForm.jsx",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwCAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-20T12:04:46.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "RegisterComponent.css",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\RegisterComponent.css",
               "RelativeDocumentMoniker": "src\\components\\RegisterComponent.css",
               "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\RegisterComponent.css",
               "RelativeToolTip": "src\\components\\RegisterComponent.css",
-              "ViewState": "AgIAACgAAAAAAAAAAAAIwEQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAIwDAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-03-20T11:30:00.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\package.json",
+              "RelativeDocumentMoniker": "package.json",
+              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\package.json",
+              "RelativeToolTip": "package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-19T06:15:17.307Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "eslint.config.js",
+              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\eslint.config.js",
+              "RelativeDocumentMoniker": "eslint.config.js",
+              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\eslint.config.js",
+              "RelativeToolTip": "eslint.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-27T12:21:38.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "apiClient.js",
+              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\apiClient.js",
+              "RelativeDocumentMoniker": "src\\apiClient.js",
+              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\apiClient.js",
+              "RelativeToolTip": "src\\apiClient.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-20T12:09:30.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\main.jsx",
+              "RelativeDocumentMoniker": "src\\main.jsx",
+              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\main.jsx",
+              "RelativeToolTip": "src\\main.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-03-20T11:08:12.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "UserComponent.css",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\UserComponent.css",
               "RelativeDocumentMoniker": "src\\components\\UserComponent.css",
@@ -355,12 +389,11 @@
               "RelativeToolTip": "src\\components\\UserComponent.css",
               "ViewState": "AgIAABAAAAAAAAAAAAAIwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-19T08:35:08.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T08:35:08.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Table.css",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\Table.css",
               "RelativeDocumentMoniker": "src\\components\\Table.css",
@@ -368,12 +401,11 @@
               "RelativeToolTip": "src\\components\\Table.css",
               "ViewState": "AgIAABgAAAAAAAAAAAAIwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-20T11:23:20.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T11:23:20.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": ".env.local",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\.env.local",
               "RelativeDocumentMoniker": ".env.local",
@@ -385,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "vite.config.js",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\vite.config.js",
               "RelativeDocumentMoniker": "vite.config.js",
@@ -397,19 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "App.jsx",
-              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\App.jsx",
-              "RelativeDocumentMoniker": "src\\App.jsx",
-              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\App.jsx",
-              "RelativeToolTip": "src\\App.jsx",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAwEEAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-03-18T08:39:04.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "PaymentTestService.js",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\services\\PaymentTestService.js",
               "RelativeDocumentMoniker": "src\\services\\PaymentTestService.js",
@@ -421,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "PaymentComponent.jsx",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\PaymentComponent.jsx",
               "RelativeDocumentMoniker": "src\\components\\PaymentComponent.jsx",
@@ -433,7 +453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "UserComponent.jsx",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\UserComponent.jsx",
               "RelativeDocumentMoniker": "src\\components\\UserComponent.jsx",
@@ -445,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "index.css",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\index.css",
               "RelativeDocumentMoniker": "src\\index.css",
@@ -457,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "PaymentForm.module.css",
               "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\PaymentForm.module.css",
               "RelativeDocumentMoniker": "src\\components\\PaymentForm.module.css",
@@ -466,30 +486,6 @@
               "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-03-20T11:30:00.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LoginForm.jsx",
-              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\LoginForm.jsx",
-              "RelativeDocumentMoniker": "src\\components\\LoginForm.jsx",
-              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\components\\LoginForm.jsx",
-              "RelativeToolTip": "src\\components\\LoginForm.jsx",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAwAgAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-03-20T12:04:46.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LoginService.js",
-              "DocumentMoniker": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\services\\LoginService.js",
-              "RelativeDocumentMoniker": "src\\services\\LoginService.js",
-              "ToolTip": "C:\\Users\\serdar.donmez\\Desktop\\ETicaretProje\\ECommerceSystemProject\\Frontend\\ECommerceSystem.Frontend\\src\\services\\LoginService.js",
-              "RelativeToolTip": "src\\services\\LoginService.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-03-20T11:47:21.309Z"
             },
             {
               "$type": "Document",
