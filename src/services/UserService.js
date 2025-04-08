@@ -15,7 +15,7 @@ export const GetUserById = async (userId) => {
 
 export const GetAllUsers = async () => {
     try {
-        const response = await apiClient.get('/User/get-all-users'); // API endpoint'ini backend'inize göre ayarlayýn
+        const response = await apiClient.get('/User/get-all-user'); // API endpoint'ini backend'inize göre ayarlayýn
         return response.data;
     } catch (error) {
         console.error('Error fetching users:', error);

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-// pages/Products.js (updated with alerts)
+// pages/Products.js (Refined Add/Update state logic)
 import React, { useState, useEffect } from 'react';
 import Button from '../components/Button';
 import Table from '../components/Table';
@@ -7,6 +7,12 @@ import Modal from '../components/Modal';
 import ProductForm from '../components/ProductForm';
 import Alert from '../components/Alert';
 import './Products.css';
+import {
+    GetAllProducts,
+    RemoveProductById,
+    AddSingleProduct,
+    UpdateProductById
+} from '../services/ProductService';
 
 function Products() {
     const [products, setProducts] = useState([]);
@@ -16,163 +22,210 @@ function Products() {
     const [currentProduct, setCurrentProduct] = useState(null);
     const [alert, setAlert] = useState({ type: '', message: '' });
 
-    useEffect(() => {
-        fetchProducts();
-    }, []);
+    // --- Helper function to map API data to Table data ---
+    // *** CRITICAL: Ensure this matches the ACTUAL data structure returned by GetAll, AddSingle, and UpdateById ***
+    const mapApiProductToTableProduct = (apiProduct) => {
+        // Add robust checks for incoming data validity
+        if (!apiProduct || typeof apiProduct !== 'object' || !apiProduct.productId) {
+            console.warn("mapApiProductToTableProduct received invalid data:", apiProduct);
+            return null; // Return null if data is invalid/incomplete
+        }
 
+        // Check casing (price vs Price) based on console logs from handleFormSubmit
+        // Assuming lowercase 'price' for now - **ADJUST THIS BASED ON YOUR CONSOLE LOGS**
+        const priceFromApi = apiProduct.price !== undefined ? apiProduct.price : null; // Default to null if price is missing
+
+        return {
+            id: apiProduct.productId,
+            name: apiProduct.productName || 'N/A', // Provide default if missing
+            price: priceFromApi, // Use the potentially adjusted price field
+            description: apiProduct.productDescription || 'N/A', // Provide default
+        };
+    };
+
+    // --- Define columns based on the MAPPED structure ---
+    const columns = [
+        { key: 'id', label: 'ID' },
+        { key: 'name', label: 'Name' },
+        { key: 'price', label: 'Price', render: (row) => row.price !== null ? `$${row.price.toFixed(2)}` : 'N/A' }, // Handle potential null price
+        { key: 'description', label: 'Description' },
+    ];
+
+    // --- Fetch and Map Products ---
     const fetchProducts = async () => {
         try {
             setLoading(true);
             setError(null);
+            setAlert({ type: '', message: '' });
 
-            // Replace with your actual API call
-            // const response = await fetch('/api/products');
-            // const data = await response.json();
+            const apiData = await GetAllProducts();
+            // Filter out any potential nulls from mapping, although GetAll should be reliable
+            const mappedProducts = apiData.map(mapApiProductToTableProduct).filter(p => p !== null);
+            setProducts(mappedProducts);
 
-            // Mock data for demonstration
-            const data = [
-                { id: 1, name: 'Product 1', price: 99.99, category: 'Electronics', stock: 42, description: 'Product 1 description' },
-                { id: 2, name: 'Product 2', price: 49.99, category: 'Clothing', stock: 78, description: 'Product 2 description' },
-                { id: 3, name: 'Product 3', price: 29.99, category: 'Home', stock: 15, description: 'Product 3 description' },
-            ];
-
-            setProducts(data);
-            setLoading(false);
         } catch (err) {
+            console.error("Fetch Products Error:", err);
             setError('Failed to load products');
-            setAlert({ type: 'error', message: 'Failed to load products. Please try again later.' });
+            setAlert({ type: 'error', message: 'Failed to load products. Please check connection or try again later.' });
+        } finally {
             setLoading(false);
         }
     };
 
-    const columns = [
-        { key: 'id', label: 'ID' },
-        { key: 'name', label: 'Name' },
-        { key: 'price', label: 'Price', render: (row) => `$${row.price.toFixed(2)}` },
-        { key: 'category', label: 'Category' },
-        { key: 'stock', label: 'Stock' },
-    ];
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
+    // --- Modal Handlers (remain the same) ---
+    const handleAddProduct = () => {
+        setCurrentProduct(null);
+        setIsModalOpen(true);
+    };
 
     const handleEdit = (product) => {
         setCurrentProduct(product);
         setIsModalOpen(true);
     };
 
-    const handleDelete = async (product) => {
-        if (window.confirm(`Are you sure you want to delete ${product.name}?`)) {
-            try {
-                // Replace with your actual API call
-                // await fetch(`/api/products/${product.id}`, { method: 'DELETE' });
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setCurrentProduct(null);
+    };
 
-                // For demonstration, we'll just filter out the product
-                setProducts(products.filter(p => p.id !== product.id));
+    // --- Delete Handler (remains the same) ---
+    const handleDelete = async (productToDelete) => {
+        if (window.confirm(`Are you sure you want to delete "${productToDelete.name}"?`)) {
+            try {
+                await RemoveProductById(productToDelete.id);
+                setProducts(currentProducts => currentProducts.filter(p => p.id !== productToDelete.id));
                 setAlert({
                     type: 'success',
-                    message: `Product "${product.name}" has been deleted successfully.`
+                    message: `Product "${productToDelete.name}" deleted successfully.`
                 });
             } catch (err) {
+                console.error("Delete Product Error:", err);
                 setAlert({
                     type: 'error',
-                    message: `Failed to delete product "${product.name}". Please try again.`
+                    message: `Failed to delete product "${productToDelete.name}". ${err.message || ''}`
                 });
             }
         }
     };
 
-    const handleAddProduct = () => {
-        setCurrentProduct(null);
-        setIsModalOpen(true);
-    };
-
+    // --- Form Submission Handler (Add/Update) - REFINED ---
     const handleFormSubmit = async (formData) => {
+        // ... (validation remains the same) ...
+        const priceValue = parseFloat(formData.price);
+        if (isNaN(priceValue)) {
+            setAlert({ type: 'error', message: 'Invalid price entered. Please enter a number.' });
+            return;
+        }
+        // ... (other validation if needed) ...
+
         try {
+            let resultApiProduct; // Will hold the raw response from the API
+            let successMessage;
+
+            setAlert({ type: '', message: '' }); // Clear previous alerts specific to submit
+
+            console.log("Submitting Form Data:", formData); // Log data being sent
+
             if (currentProduct) {
-                // Update existing product
-                // Replace with your actual API call
-                // await fetch(`/api/products/${currentProduct.id}`, {
-                //   method: 'PUT',
-                //   headers: { 'Content-Type': 'application/json' },
-                //   body: JSON.stringify(formData)
-                // });
+                // ----- UPDATE -----
+                console.log(`Calling UpdateProductById for ID: ${currentProduct.id}`);
+                resultApiProduct = await UpdateProductById(
+                    currentProduct.id,
+                    formData.name,
+                    priceValue,
+                    formData.description
+                );
+                // *** Log the exact API response ***
+                console.log("API response from UpdateProductById:", resultApiProduct);
 
-                // For demonstration, we'll just update the product in our state
-                setProducts(products.map(p =>
-                    p.id === currentProduct.id ? { ...p, ...formData } : p
-                ));
+                // *** Attempt to map the response ***
+                const updatedMappedProduct = mapApiProductToTableProduct(resultApiProduct);
+                console.log("Mapped data after update:", updatedMappedProduct);
 
-                setAlert({
-                    type: 'success',
-                    message: `Product "${formData.name}" has been updated successfully.`
-                });
+                if (updatedMappedProduct) {
+                    // If mapping is successful, update the state
+                    successMessage = `Product "${updatedMappedProduct.name}" updated successfully.`;
+                    setProducts(currentProducts =>
+                        currentProducts.map(p =>
+                            p.id === currentProduct.id ? updatedMappedProduct : p
+                        )
+                    );
+                    setAlert({ type: 'success', message: successMessage });
+                    closeModal();
+                } else {
+                    // If mapping failed (API didn't return expected data)
+                    console.warn("Update successful, but API response was not usable for direct state update.");
+                    setAlert({ type: 'warning', message: `Product updated. Refreshing list to ensure consistency.` });
+                    closeModal();
+                    await fetchProducts(); // *** Re-fetch the entire list as a fallback ***
+                }
+
             } else {
-                // Add new product
-                // Replace with your actual API call
-                // const response = await fetch('/api/products', {
-                //   method: 'POST',
-                //   headers: { 'Content-Type': 'application/json' },
-                //   body: JSON.stringify(formData)
-                // });
-                // const newProduct = await response.json();
+                // ----- ADD -----
+                console.log("Calling AddSingleProduct");
+                resultApiProduct = await AddSingleProduct(
+                    formData.name,
+                    priceValue,
+                    formData.description
+                );
+                // *** Log the exact API response ***
+                console.log("API response from AddSingleProduct:", resultApiProduct);
 
-                // For demonstration, we'll just add a new product with a generated ID
-                const newProduct = {
-                    ...formData,
-                    id: Math.max(0, ...products.map(p => p.id)) + 1
-                };
-                setProducts([...products, newProduct]);
+                // *** Attempt to map the response ***
+                const newMappedProduct = mapApiProductToTableProduct(resultApiProduct);
+                console.log("Mapped data after add:", newMappedProduct);
 
-                setAlert({
-                    type: 'success',
-                    message: `Product "${formData.name}" has been added successfully.`
-                });
+                if (newMappedProduct) {
+                    // If mapping is successful, add to state
+                    successMessage = `Product "${newMappedProduct.name}" added successfully.`;
+                    setProducts(currentProducts => [...currentProducts, newMappedProduct]);
+                    setAlert({ type: 'success', message: successMessage });
+                    closeModal();
+                } else {
+                    // If mapping failed (API didn't return expected data)
+                    console.warn("Add successful, but API response was not usable for direct state update.");
+                    setAlert({ type: 'warning', message: `Product added. Refreshing list to ensure consistency.` });
+                    closeModal();
+                    await fetchProducts(); // *** Re-fetch the entire list as a fallback ***
+                }
             }
 
-            setIsModalOpen(false);
         } catch (err) {
+            console.error("Form Submit Error (Add/Update):", err);
+            const action = currentProduct ? 'update' : 'add';
             setAlert({
                 type: 'error',
-                message: `Failed to save product. Please try again.`
+                message: `Failed to ${action} product "${formData.name}". ${err.message || 'Please try again.'}`
             });
+            // Keep modal open for user correction on error
         }
     };
 
+    // --- Render Logic (remains the same) ---
     if (loading) return <div className="loading">Loading products...</div>;
-    if (error) return <div className="error">{error}</div>;
+    if (error && products.length === 0) { /* ... */ }
 
     return (
         <div className="products-container">
+            {/* Header */}
             <header className="page-header">
                 <h1>Products</h1>
                 <Button onClick={handleAddProduct}>Add New Product</Button>
             </header>
 
-            {alert.message && (
-                <Alert
-                    type={alert.type}
-                    message={alert.message}
-                    onClose={() => setAlert({ type: '', message: '' })}
-                    autoClose={true}
-                />
-            )}
+            {/* Alert */}
+            {alert.message && (<Alert type={alert.type} message={alert.message} onClose={() => setAlert({ type: '', message: '' })} autoClose={5000} />)}
 
-            <Table
-                columns={columns}
-                data={products}
-                onEdit={handleEdit}
-                onDelete={handleDelete}
-                emptyMessage="No products found. Add some products to get started."
-            />
+            {/* Table */}
+            {!loading && (<Table columns={columns} data={products} onEdit={handleEdit} onDelete={handleDelete} emptyMessage="No products found. Click 'Add New Product' to get started." />)}
 
-            <Modal
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-                title={currentProduct ? 'Edit Product' : 'Add New Product'}
-            >
-                <ProductForm
-                    product={currentProduct}
-                    onSubmit={handleFormSubmit}
-                    onCancel={() => setIsModalOpen(false)}
-                />
+            {/* Modal */}
+            <Modal isOpen={isModalOpen} onClose={closeModal} title={currentProduct ? `Edit Product: ${currentProduct.name}` : 'Add New Product'} >
+                <ProductForm product={currentProduct} onSubmit={handleFormSubmit} onCancel={closeModal} />
             </Modal>
         </div>
     );
