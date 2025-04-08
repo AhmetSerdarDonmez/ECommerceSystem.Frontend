@@ -37,6 +37,8 @@ function RegisterForm() {
 
 
     useEffect(() => {
+        const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID; // <-- Access it here
+
         // Patch the Permissions API if available.
         if (navigator.permissions && navigator.permissions.query) {
             const originalQuery = navigator.permissions.query;
@@ -46,7 +48,7 @@ function RegisterForm() {
         // Load Google Identity Services and render the sign-in button.
         if (window.google && window.google.accounts) {
             window.google.accounts.id.initialize({
-                client_id: '900122265445-e57qpuu3sudvt37jhor0rvrkm3q3uuue.apps.googleusercontent.com', // Replace with your Client ID
+                client_id: googleClientId, // Replace with your Client ID
                 callback: handleCredentialResponse,
             });
             window.google.accounts.id.renderButton(
@@ -62,11 +64,10 @@ function RegisterForm() {
 
     // This function is called once Google Sign-In returns a token.
     const handleCredentialResponse = async (response) => {
-        console.log('Encoded JWT ID token:', response.credential);
+
         try {
             // Call the Google Sign-In registration service.
             const result = await RegisterUserServiceByGoogle(response.credential);
-            console.log('Google Sign-In registration result:', result);
 
             var Token = result.token;
 
